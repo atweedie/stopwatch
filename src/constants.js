@@ -1,0 +1,1 @@
+export const TIMER_TICK_DURATION_IN_MS = 10;

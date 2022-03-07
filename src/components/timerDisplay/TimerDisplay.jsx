@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { TimerState } from "../../modules/timerStateContext";
+import {TIMER_TICK_DURATION_IN_MS} from "../../constants";
 
 const TimerDisplay = () => {
     const {elapsedTime, setElapsedTime, isRunning} = useContext(TimerState)
@@ -9,8 +10,8 @@ const TimerDisplay = () => {
     useEffect(() => {
         if (isRunning) {
             setTimeout(() => {
-                setElapsedTime(elapsedTime + 10)
-            }, 10);
+                setElapsedTime(elapsedTime + TIMER_TICK_DURATION_IN_MS)
+            }, TIMER_TICK_DURATION_IN_MS);
         }
     })
 
