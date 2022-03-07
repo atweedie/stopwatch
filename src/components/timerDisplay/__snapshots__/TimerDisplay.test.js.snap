@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render as expected 1`] = `
+<div>
+  <h1
+    class="timer"
+    id="stopwatch-elapsed"
+  >
+    0:00:00.00
+  </h1>
+</div>
+`;
