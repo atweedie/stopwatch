@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { TimerStatus } from "../../modules/timerStatusContext";
 
 const TimerDisplay = () => {
@@ -11,7 +11,7 @@ const TimerDisplay = () => {
             setTimeout(() => {
                 setTimerState({
                     elapsedTime: timerState.elapsedTime + 10,
-                    isRunning: true
+                    isRunning: timerState.isRunning
                 })
             }, 10);
         }
