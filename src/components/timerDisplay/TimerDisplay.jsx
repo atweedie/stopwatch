@@ -1,18 +1,15 @@
 import { useContext, useEffect } from "react";
-import { TimerStatus } from "../../modules/timerStatusContext";
+import { TimerState } from "../../modules/timerStateContext";
 
 const TimerDisplay = () => {
-    const {timerState, setTimerState} = useContext(TimerStatus)
+    const {elapsedTime, setElapsedTime, isRunning} = useContext(TimerState)
 
-    const date = new Date(timerState.elapsedTime);
+    const date = new Date(elapsedTime);
 
     useEffect(() => {
-        if (timerState.isRunning) {
+        if (isRunning) {
             setTimeout(() => {
-                setTimerState({
-                    elapsedTime: timerState.elapsedTime + 10,
-                    isRunning: timerState.isRunning
-                })
+                setElapsedTime(elapsedTime + 10)
             }, 10);
         }
     })

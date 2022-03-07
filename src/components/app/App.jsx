@@ -1,22 +1,19 @@
 import '../../styles/App.css';
-import { TimerStatus } from '../../modules/timerStatusContext';
+import { TimerState } from '../../modules/timerStateContext';
 import TimerDisplay from '../timerDisplay/TimerDisplay';
 import { useState } from 'react';
 import TimerToggleButton from '../timerToggleButton/TimerToggleButton';
 
 const App = () => {
-
-    const [timerState, setTimerState] = useState({
-        elapsedTime: 0,
-        isRunning: false
-    });
+    const [elapsedTime, setElapsedTime] = useState(0);
+    const [isRunning, setIsRunning] = useState(false);
 
     return (
         <div className="App">
-            <TimerStatus.Provider value={{timerState, setTimerState}}>
+            <TimerState.Provider value={{elapsedTime, setElapsedTime, isRunning, setIsRunning}}>
                 <TimerDisplay/>
                 <TimerToggleButton/>
-            </TimerStatus.Provider>
+            </TimerState.Provider>
         </div>
     )
 };

@@ -1,19 +1,12 @@
 import { useContext } from "react"
-import { TimerStatus } from "../../modules/timerStatusContext"
-
-const toggleTimer = (timerState, setTimerState) => {
-    setTimerState({
-        ...timerState,
-        isRunning: !timerState.isRunning
-    })
-}
+import { TimerState } from "../../modules/timerStateContext"
 
 const TimerToggleButton = () => {
-    const {timerState, setTimerState} = useContext(TimerStatus);
+    const {isRunning, setIsRunning} = useContext(TimerState);
 
     return (
-        <button onClick={() => toggleTimer(timerState, setTimerState)}>
-            {timerState.isRunning ? 'Stop' : 'Start'}
+        <button onClick={() => setIsRunning(!isRunning)}>
+            {isRunning ? 'Stop' : 'Start'}
         </button>
     )
 }
