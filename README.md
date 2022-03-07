@@ -1,7 +1,9 @@
 
 # Stopwatch Technical Test
 
-A simple stopwatch application built with React. To run the application or the tests, see the available scripts section below.
+A simple stopwatch application built with React. To run the application or the tests, see the available scripts section below. First you may need to install any dependancies by running:
+
+```npm install```
 
 NOTE: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
