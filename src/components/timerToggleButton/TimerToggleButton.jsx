@@ -5,7 +5,7 @@ const TimerToggleButton = () => {
     const {isRunning, setIsRunning} = useContext(TimerState);
 
     return (
-        <button onClick={() => setIsRunning(!isRunning)}>
+        <button id="stopwatch-start-stop" onClick={() => setIsRunning(!isRunning)}>
             {isRunning ? 'Stop' : 'Start'}
         </button>
     )

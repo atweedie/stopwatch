@@ -12,7 +12,7 @@ const TimerResetButton = () => {
     }
 
     return (
-        <button onClick={resetTimer}>
+        <button id="stopwatch-reset" onClick={resetTimer}>
             Reset
         </button>
     )
