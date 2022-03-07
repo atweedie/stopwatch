@@ -16,7 +16,7 @@ const TimerDisplay = () => {
     })
 
     return (
-        <h1 id="stopwatch-elapsed">
+        <h1 className="timer" id="stopwatch-elapsed">
             {date.toISOString().substring(12,22)}
         </h1>
     )
