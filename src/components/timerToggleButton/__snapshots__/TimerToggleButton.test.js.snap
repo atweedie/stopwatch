@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render as expected when isRunning is set to false 1`] = `
+<div>
+  <button
+    class="button"
+    id="stopwatch-start-stop"
+  >
+    Start
+  </button>
+</div>
+`;
+
+exports[`should render as expected when isRunning is set to true 1`] = `
+<div>
+  <button
+    class="button"
+    id="stopwatch-start-stop"
+  >
+    Stop
+  </button>
+</div>
+`;
